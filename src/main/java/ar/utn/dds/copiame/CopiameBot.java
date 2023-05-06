@@ -22,6 +22,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
+//java -cp target/copiame.jarwith dependencies
 public class CopiameBot extends TelegramLongPollingBot {
 
 	public CopiameBot(String botToken) {
@@ -57,7 +58,7 @@ public class CopiameBot extends TelegramLongPollingBot {
 	private String enviarLote(java.io.File downloadedFile) throws IOException, ClientProtocolException {
 		HttpClient httpClient = HttpClients.createDefault();
 		HttpPost httpPost = new HttpPost(
-				"http://localhost:8080/analisis");
+				"https://dds-copiame-webs.onrender.com/analisis");
 		MultipartEntityBuilder builder =
 				MultipartEntityBuilder.create();
 		builder.addBinaryBody( "file", downloadedFile,
