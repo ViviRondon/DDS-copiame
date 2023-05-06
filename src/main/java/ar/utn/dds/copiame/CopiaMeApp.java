@@ -7,6 +7,8 @@ import java.nio.file.Paths;
 
 public class CopiaMeApp {
 
+	
+	
 	public static void main(String[] args) {
 		
 		// Valido argumentos del usuario --> Capa Presentación
@@ -34,7 +36,7 @@ public class CopiaMeApp {
 		// Utilizo al dominio -- NO leo datos de otra fuente -- NO pido ni muestro información 
 		float umbral = 0.5f;
 		AnalsisDeCopia analisis = new AnalsisDeCopia(umbral, lote);		
-		ResultadoLote resultado = analisis.procesar();
+		ResultadoLote resultado = analisis.resultado();
 		//--------------------
 		
 		// Muestro la informacion por pantall --> Capa de Presentación
